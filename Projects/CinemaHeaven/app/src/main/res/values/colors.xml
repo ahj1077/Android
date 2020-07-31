@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 타이틀바 -->
+    <color name="colorPrimary">#3250B4</color>
+
+    <!-- 상태 바-->
+    <color name="colorPrimaryDark">#1B3B9B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!-- 검은 글씨-->
+    <color name="black">#000000</color>
+
+    <!-- 하얀 글씨 -->
+    <color name="white">#ffffff</color>
+
+    <!-- 회색 블록-->
+    <color name="lightGray">#E9E8E8</color>
+
+    <!-- 주황 글씨-->
+    <color name="orange">#FF5722</color>
+
+    <!-- 노랑 테두리-->
+    <color name="yellow">#F8C35D</color>
+</resources>
