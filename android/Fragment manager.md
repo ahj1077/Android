@@ -65,6 +65,27 @@ fragmentTransaction.addToBackStack(null);
 fragmentTransaction.commit();
 ```
 
+## 액티비티와의 통신  
+
+### 액티비티에서 프래그먼트 자원에 접근  
+
+프래그먼트 매니저에 속한 findFragmentById() 또는 findFragmentByTag()로 원하는 프래그먼트를 참조할 수 있다.  
+
+이때 id로 찾는 경우는 레이아웃이 있는 경우, tag로 찾는 경우는 레이아웃이 없는 경우에 사용한다.  
+  
+  
+### 프래그먼트에서 액티비티 자원에 접근  
+  
+
+interface를 사용하여 액티비티에 데이터를 보낼 수 있다.    
+
+액티비티는 리스너 interface를 구현하여 콜백 메소드를 오버라이딩하고, 프래그먼트는 생성될 때 onAttach에서 액티비티로부터 context를 받아 리스너로 사용할 수 있다.  
+
+이때 프래그먼트가 액티비티에서 제거되는 onDetach에서 listener 변수를 null로 해주도록 하자.  
+
+
+
+  
 
 
 
