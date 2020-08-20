@@ -21,7 +21,7 @@ imm.showSoftInput(editText, InputMethodManager.SHOW_IMPLICIT);
 
 // 키보드 숨기기
 
-imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),         // edittext.getWindowToken() 도 가능
 
 InputMethodManager.HIDE_NOT_ALWAYS);
 
