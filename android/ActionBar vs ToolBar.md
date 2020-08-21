@@ -27,7 +27,7 @@
   2. 액티비티의 xml에 Toolbar 추가
   
   ```
-  <android.support.v7.widget.Toolbar
+  <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
