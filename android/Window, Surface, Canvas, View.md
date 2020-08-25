@@ -99,7 +99,8 @@
   measure() -> onMeasure() -> layout() -> onLayout()
   ```
   
-  1. measure(widthMeasureSpec: Int, heightMeasureSpec : Int): 뷰의 크기를 알아내기 위해 호출되며, 실제 크기     측정을 위해 onMeasure()를 호출합니다. 각 부모들은 measure를 한번 이상 호출하여 자식들의 사이즈를 알아내거나 부모가 정합니다.
+  1. measure(widthMeasureSpec: Int, heightMeasureSpec : Int): 뷰의 크기를 알아내기 위해 호출되며, 실제 크기 측정을 위해 onMeasure()를 호출합니다.
+  각 부모들은 measure를 한번 이상 호출하여 자식들의 사이즈를 알아내거나 부모가 정합니다.
   
    - widthMeasureSpec : Parent가 부여한 필요한 가로공간
    - heightMeasureSpec : Parent가 부여한 필요한 세로공간
@@ -139,9 +140,10 @@
   이때 onDraw이루 invalidate()가 호출되면 다시 dispatchDraw() 부터 다시 호출되며,
   requestLayout()가 호출되면 measure() 부터 다시 호출된다.
   
-  1. Constructor : 
-    - CustomView(context: Context) : 코드로 생성하면 호출
-    - CustomView(context: Context, attributeSet:AttributeSet): xml로 생성하면 호출
+  1. Constructor
+  
+   - CustomView(context: Context) : 코드로 생성하면 호출
+   - CustomView(context: Context, attributeSet:AttributeSet): xml로 생성하면 호출
     
   2. onAttachedToWindow: Parent View가 addView(view: View)를 호출하면 해당 View가 window에 연결됩니다.
     이 단계 부터 id를 통해 접근 할 수 있습니다.
@@ -152,8 +154,8 @@
       - MeasureSpec.EXACTLY : 직접적으로 width와 height에 대해 하드코딩할 때 사용
       - MeasureSpec.AT_MOST : 부모가 자식의 최대 사이즈를 설정하기 위해 사용
       - MeasureSpec.UNSPECIFIED: 부모에 의해 사용되며 제한이 없기 때문에 자식 View가 원하는 사이즈를 가질 수 있습니다.
-      
-      
+        
+        
      2. ViewGroup.LayoutParams : 자식 뷰가 부모 뷰에게 자신이 어떻게 측정되고 위치를 정할지 요청하는데 사용
       - 정확한 수치 (50dp, 100dp ...)
       - MATCH_PARENT : 자신의 부모만큼 크기를 원함
