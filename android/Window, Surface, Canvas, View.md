@@ -63,11 +63,13 @@
   
   이때 사용하는게 SurfaceView입니다.
   
+  일반 view와 달리 그리기를 onDraw를 호출하는 것이 아닌 스레드를 이용해 강제로 화면에 그려버린다.
+  
   SurfaceView는 Canvas가 아닌 Surface(= 가상 메모리 화면)에 그리고 그려진 Surface를 화면에 뿌리기 때문에 게임이나 카메라같은 
   
   높은 반응성이 필요한 UI 작업이 필요한 경우 사용할 수 있습니다.
   
-  SurfaceView의 구조는 Surface와 SurfaceHolder 로 구성되며, SurfaceHolder가 Surface에 접근하여 화면을 처리해주는 구조입니다.
+  SurfaceView의 구조는 Surface와 SurfaceHolder 로 구성되며, SurfaceHolder가 Surface에 미리 그리고, 이 Surface가 SurfaceView에 반영하는 구조입니다.
   
   
   
