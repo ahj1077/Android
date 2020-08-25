@@ -29,12 +29,8 @@
   #### 이중 버퍼 렌더링?
   
   - 스크린에 출력될 화면 데이터는 **프레임 버퍼**에 저장되는데, 하나의 버퍼만 가지는 경우 이미지가 반복해서 그려지게 되거나, 이미지가 다 그려지지 않아도
-  
-  화면 주사율 때문에 렌더링을 해야할 때, 다 그려지지 않은 프레임 버퍼가 렌더링이 되어서 이미지가 깜빡이는 Flicker 현상이 
-  
-  나타날 수 있습니다. 이를 해결하기 위해 프레임 버퍼에 바로 렌더링 하지 않고, 다른 버퍼를 만들어서 그 버퍼에 렌더링을 완료 하고,
-  
-  다음 프레임 버퍼에 옮기는 방식을 사용하여 Flicker 현상을 해결할 수 있습니다.
+    화면 주사율 때문에 렌더링을 해야할 때, 다 그려지지 않은 프레임 버퍼가 렌더링이 되어서 이미지가 깜빡이는 Flicker 현상이 나타날 수 있습니다.
+    이를 해결하기 위해 프레임 버퍼에 바로 렌더링 하지 않고, 다른 버퍼를 만들어서 그 버퍼에 렌더링을 완료 하고, 다음 프레임 버퍼에 옮기는 방식을 사용하여 Flicker 현상을 해결할 수 있습니다.
   
   
   ## Canvas
@@ -108,9 +104,11 @@
    - widthMeasureSpec : Parent가 부여한 필요한 가로공간
    - heightMeasureSpec : Parent가 부여한 필요한 세로공간
    
+   
   2. onMeasure(widthMeasureSpec:Int, heightMeasureSpec: Int): 실제 뷰의 크기를 측정합니다.
   
-   각 파라미터는 위와 동일
+   - 각 파라미터는 위와 동일
+  
   
   3. layout(left: Int, top: Int, right: Int, botton: Int): 실제 뷰의 크기를 측정합니다.
   
@@ -118,6 +116,7 @@
    - top : Parent에 대한 위쪽 포지션
    - right : Parent에 대한 오른쪽 포지션
    - bottom : Parent에 대한 하단 포지션
+   
    
   4. onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) : 실제 뷰의 할당을 합니다.
    
@@ -154,10 +153,11 @@
       - MeasureSpec.AT_MOST : 부모가 자식의 최대 사이즈를 설정하기 위해 사용
       - MeasureSpec.UNSPECIFIED: 부모에 의해 사용되며 제한이 없기 때문에 자식 View가 원하는 사이즈를 가질 수 있습니다.
       
-      2. ViewGroup.LayoutParams : 자식 뷰가 부모 뷰에게 자신이 어떻게 측정되고 위치를 정할지 요청하는데 사용
-       - 정확한 수치 (50dp, 100dp ...)
-       - MATCH_PARENT : 자신의 부모만큼 크기를 원함
-       - WRAP_CONTENT : 자신의 내용물을 담을 수 있을 만큼만 크기를 원함. padding 포함
+      
+     2. ViewGroup.LayoutParams : 자식 뷰가 부모 뷰에게 자신이 어떻게 측정되고 위치를 정할지 요청하는데 사용
+      - 정확한 수치 (50dp, 100dp ...)
+      - MATCH_PARENT : 자신의 부모만큼 크기를 원함
+      - WRAP_CONTENT : 자신의 내용물을 담을 수 있을 만큼만 크기를 원함. padding 포함
       
   4. onLayout: 개별 자식 뷰들의 사이즈 및 위치 할당
   5. onDraw : 뷰를 그리기 시작한다. Canvas와 Paint를 사용하여 그리기 시작하며, Canvas는 모양을 그리고 Paint는 색을 칠합니다.
