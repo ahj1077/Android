@@ -52,7 +52,11 @@
     
     overrride fun onCreate(saveInstanceState: Bundle?){
 
-      val model = ViewModelProviders.of(this).get(myViewModel::class.java)
+      val model = ViewModelProvider(this).get(MyViewModel::class.java) // lifecycle extension을 이용한 방법
+      
+      //val model = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(MyViewModel::class.java)  -> lifecycle extension 없이 가능한 방법. 
+      
+      //val model = ViewModelProviders.of(this).get(myViewModel::class.java) -> 현재는 deprecated 된 방법
       
       })
     }
