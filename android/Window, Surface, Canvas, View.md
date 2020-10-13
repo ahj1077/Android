@@ -67,6 +67,7 @@
   
   SurfaceView의 구조는 Surface와 SurfaceHolder 로 구성되며, SurfaceHolder가 Surface에 미리 그리고, 이 Surface가 SurfaceView에 반영하는 구조입니다.
   
+  
   ## View와 ViewGroup
   
   안드로이드에서 UI요소들은 크게 View와 ViewGroup으로 이루어져 있으며, 아래와 같은 특징이 있습니다.
@@ -111,7 +112,7 @@
    - 각 파라미터는 위와 동일
   
   
-  3. layout(left: Int, top: Int, right: Int, botton: Int): 실제 뷰의 크기를 측정합니다.
+  3. layout(left: Int, top: Int, right: Int, botton: Int): 뷰의 위치를 할당하기위해 onLayout을 호출합니다.
   
    - left : Parent에 대한 왼쪽 포지션
    - top : Parent에 대한 위쪽 포지션
